@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employeeDao" class="com.example.employee_rest_service.dao.EmployeeDao">
+        <property name="employeeList">
+            <list>
+                <bean class="com.example.employee_rest_service.model.Employee">
+                    <property name="id" value="1"/>
+                    <property name="name" value="John Doe"/>
+                    <property name="designation" value="Developer"/>
+                </bean>
+                <bean class="com.example.employee_rest_service.model.Employee">
+                    <property name="id" value="2"/>
+                    <property name="name" value="Jane Smith"/>
+                    <property name="designation" value="Manager"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+</beans>
